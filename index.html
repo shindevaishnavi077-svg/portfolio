@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaishnavi Shinde Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8f5f2;
+color:#4b352a;
+}
+
+/* NAVBAR */
+
+nav{
+background:#8b644a;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+color:white;
+font-size:24px;
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+/* HERO SECTION */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:60px 8%;
+flex-wrap:wrap;
+}
+
+.hero-image{
+width:420px;
+height:420px;
+border-radius:50%;
+overflow:hidden;
+border:20px solid #8b644a;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hero-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-content{
+max-width:600px;
+}
+
+.hero-content h1{
+font-size:65px;
+line-height:75px;
+color:#5a4032;
+}
+
+.hero-content h2{
+font-size:40px;
+margin-top:15px;
+}
+
+.role{
+display:inline-block;
+padding:10px 25px;
+background:#8b644a;
+color:white;
+border-radius:30px;
+margin:15px 0;
+}
+
+.hero-content p{
+line-height:30px;
+text-align:justify;
+}
+
+/* COMMON */
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+font-size:50px;
+margin-bottom:40px;
+color:#5a4032;
+text-align:center;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+
+/* ABOUT */
+
+.about p{
+line-height:30px;
+font-size:17px;
+text-align:justify;
+}
+
+/* EDUCATION */
+
+.education-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.edu-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+/* SKILLS */
+
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.skill-box{
+background:#8b644a;
+color:white;
+padding:20px;
+text-align:center;
+border-radius:10px;
+font-weight:600;
+}
+
+/* PROJECTS */
+/* PROJECTS */
+
+.project-container{
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+
+.project-card{
+background:#ffffff;
+padding:35px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.project-card h3{
+font-size:28px;
+color:#8b644a;
+margin-bottom:15px;
+}
+
+.project-card p{
+font-size:16px;
+line-height:28px;
+color:#555;
+margin-bottom:25px;
+}
+
+.project-slider{
+    position:relative;
+    max-width:950px;
+    margin:auto;
+}
+
+.slider-window{
+    width:950px;
+    overflow:hidden;
+    margin:auto;
+}
+
+.slider-track{
+    display:flex;
+    gap:15px;
+    transition:transform 0.5s ease;
+}
+
+.slider-track img{
+    width:467px;
+    min-width:467px;
+    height:400px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:15px;
+    padding:10px;
+    border:1px solid #ddd;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+.slider-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#8b644a;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    z-index:10;
+}
+
+.prev{
+    left:-70px;
+}
+
+.next{
+    right:-70px;
+}
+
+.slider-btn:hover{
+    background:#5a4032;
+}
+@media(max-width:768px){
+
+.slider-track img{
+width:100%;
+height:250px;
+}
+
+.project-card{
+padding:20px;
+}
+
+.project-card h3{
+font-size:22px;
+}
+
+.slider-btn{
+width:40px;
+height:40px;
+font-size:18px;
+}
+
+}/* CERTIFICATIONS */
+
+.cert-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.cert-box{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CONTACT */
+
+.contact{
+background:#8b644a;
+color:white;
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+font-size:18px;
+}
+
+footer{
+background:#5a4032;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-image{
+width:280px;
+height:280px;
+margin-bottom:30px;
+}
+
+.hero-content h1{
+font-size:42px;
+line-height:50px;
+}
+
+.hero-content h2{
+font-size:28px;
+}
+
+.section-title{
+font-size:35px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Vaishnavi</div>
+
+<ul>
+<li><a href="#home">Home</a></li>	
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+<div class="hero-image">
+<img src="pp.jpeg" alt="Vaishnavi Shinde">
+</div>
+
+<div class="hero-content">
+
+<h1>Professional Portfolio</h1>
+
+<h2>Vaishnavi Popat Shinde</h2>
+
+<div class="role">
+BBA (Computer Applications) Graduate
+</div>
+
+<p>
+Motivated and detail-oriented BBA (Computer Applications)
+student seeking an entry-level opportunity in the IT industry.
+Eager to apply skills in programming, web development,
+and database management while continuously learning new
+technologies and contributing to organizational growth.
+</p>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+Hello! I'm Vaishnavi Popat Shinde, a passionate BBA (Computer Applications)
+graduate with strong knowledge in programming, web development,
+database management and software technologies.
+
+I enjoy building real-world applications and continuously enhancing
+my technical skills through projects, certifications and hands-on learning.
+
+I am a quick learner, self-motivated and enthusiastic about starting
+my professional journey in the IT industry.
+</p>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="education-container">
+
+<div class="edu-card">
+<h3>10th Standard</h3>
+<h2>76.40%</h2>
+</div>
+
+<div class="edu-card">
+<h3>12th Standard</h3>
+<h2>73.00%</h2>
+</div>
+
+<div class="edu-card">
+<h3>BBA (CA)</h3>
+<p>First Year SGPA : 9.62</p>
+<p>Second Year SGPA : 8.41</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">Skills & Expertise</h2>
+
+<div class="skills-container">
+
+<div class="skill-box">HTML</div>
+<div class="skill-box">CSS</div>
+<div class="skill-box">JavaScript</div>
+<div class="skill-box">PHP</div>
+<div class="skill-box">MySQL</div>
+<div class="skill-box">Bootstrap</div>
+<div class="skill-box">AI Tools</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="project-container">
+
+    <!-- Hospital Project -->
+    <div class="project-card">
+
+        <h3>School Management System</h3>
+
+        <p>
+            Designed to manage student records,
+            attendance and academic information efficiently.
+        </p>
+
+        <div class="project-slider">
+
+    <button class="slider-btn prev"
+        onclick="moveSlide('school',-1)">❮</button>
+
+    <div class="slider-window">
+
+        <div class="slider-track" id="school">
+
+            <img src="s1.jpeg">
+            <img src="s2.jpeg">
+            <img src="s3.jpeg">
+            <img src="s4.jpeg">
+            <img src="s5.jpeg">
+            <img src="s6.jpeg">
+            <img src="s7.jpeg">
+            <img src="s8.jpeg">
+
+        </div>
+
+    </div>
+
+    <button class="slider-btn next"
+        onclick="moveSlide('school',1)">❯</button>
+
+</div>
+
+    </div>
+
+    </div>
+
+    <!-- AgroSmart Project -->
+    <div class="project-card">
+
+        <h3>AgroSmart Farmer Resource & Cost Management System</h3>
+
+        <p>
+            Developed to help farmers manage resources,
+            track costs and improve agricultural planning.
+        </p>
+
+       <div class="project-slider">
+
+    <button class="slider-btn prev"
+        onclick="moveSlide('agro',-1)">❮</button>
+
+    <div class="slider-window">
+
+        <div class="slider-track" id="agro">
+
+            <img src="a1.jpeg">
+            <img src="a2.jpeg">
+            <img src="a3.jpeg">
+            <img src="a4.jpeg">
+            <img src="a5.jpeg">
+            <img src="a6.jpeg">
+            <img src="a7.jpeg">
+            <img src="a8.jpeg">
+
+        </div>
+
+    </div>
+
+    <button class="slider-btn next"
+        onclick="moveSlide('agro',1)">❯</button>
+
+</div>
+    </div>
+
+    <!-- School Project -->
+    <div class="project-card">
+
+        <h3>Hospital Management System</h3>
+
+        <p>
+            Developed using PHP and MySQL to manage patients,
+            appointments, doctors, billing and administrative records.
+        </p>
+
+        <div class="project-slider">
+
+    <button class="slider-btn prev"
+        onclick="moveSlide('hospital',-1)">❮</button>
+
+    <div class="slider-window">
+
+        <div class="slider-track" id="hospital">
+
+            <img src="h1.jpeg">
+            <img src="h2.jpeg">
+            <img src="h3.jpeg">
+            <img src="h4.jpeg">
+            <img src="h5.jpeg">
+            <img src="h6.jpeg">
+            <img src="h7.jpeg">
+        </div>
+
+    </div>
+
+    <button class="slider-btn next"
+        onclick="moveSlide('hospital',1)">❯</button>
+
+</div>
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<h2>Contact Me</h2>
+
+<p>📧 shindevaishnavi077@gmail.com</p>
+
+
+<p>
+Seeking an entry-level opportunity in the IT industry
+to apply my skills and contribute to organizational growth.
+</p>
+
+</section>
+
+<footer>
+© 2026 Vaishnavi Popat Shinde | Portfolio
+</footer><script>
+
+const positions = {};
+
+function moveSlide(id, direction){
+
+    const slider = document.getElementById(id);
+
+    if(positions[id] === undefined){
+        positions[id] = 0;
+    }
+
+    const totalImages = slider.querySelectorAll("img").length;
+
+    positions[id] += direction * 2;
+
+    if(positions[id] < 0){
+        positions[id] = 0;
+    }
+
+    if(positions[id] > totalImages - 2){
+        positions[id] = totalImages - 2;
+    }
+
+    slider.style.transform =
+    `translateX(-${positions[id] * 482}px)`;
+}
+
+</script>body>
+</html>
